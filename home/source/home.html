@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,8 @@
   <link href="../css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
+
+<header>
 <!-- Navbar (Barra de Navegação) -->
 <nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start ">
   <div class="container-fluid">
@@ -51,6 +54,7 @@
     </div>
   </div>
 </nav>
+</header>
 <main class="container mt-5">
   <h1 class="text-center mb-5">Explore Vagas de Emprego</h1>
   <div class="row">
@@ -61,7 +65,7 @@
         <div class="card-body">
           <h5 class="card-title"><i class="bi bi-laptop-code icon-job"></i>Engenheiro de Software</h5>
           <p class="card-text">Estamos procurando um Engenheiro de Software talentoso e motivado para se juntar à nossa equipe. Você será responsável por desenvolver e manter nossas aplicações principais.</p>
-          <a href="vaga.html" class="btn btn-bd-av w-100">Saiba Mais</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#modalVagaPop" class="btn btn-bd-av w-100">Saiba Mais</button>
         </div>
       </div>
     </div>
@@ -72,9 +76,9 @@
         <div class="card-body">
           <h5 class="card-title"><i class="bi bi-bullseye icon-job"></i>Gerente de Marketing</h5>
           <p class="card-text">Você é apaixonado por marketing e tem um histórico comprovado de sucesso? Estamos buscando um Gerente de Marketing para liderar nossas iniciativas de marketing e ajudar a crescer nosso negócio.</p>
-          <a href="vaga.html" class="btn btn-bd-av w-100">Saiba Mais</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#modalVagaPop" class="btn btn-bd-av w-100">Saiba Mais</button>
+         </div>
         </div>
-      </div>
     </div>
 
     <!-- Vaga de Emprego duplicada (repetida para fins de demonstração) -->
@@ -83,7 +87,7 @@
         <div class="card-body">
           <h5 class="card-title"><i class="bi bi-bullseye icon-job"></i>Gerente de Marketing</h5>
           <p class="card-text">Você é apaixonado por marketing e tem um histórico comprovado de sucesso? Estamos buscando um Gerente de Marketing para liderar nossas iniciativas de marketing e ajudar a crescer nosso negócio.</p>
-          <a href="vaga.html" class="btn btn-bd-av w-100">Saiba Mais</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#modalVagaPop" class="btn btn-bd-av w-100">Saiba Mais</button>
         </div>
       </div>
     </div>
@@ -93,7 +97,7 @@
         <div class="card-body">
           <h5 class="card-title"><i class="bi bi-bullseye icon-job"></i>Gerente de Marketing</h5>
           <p class="card-text">Você é apaixonado por marketing e tem um histórico comprovado de sucesso? Estamos buscando um Gerente de Marketing para liderar nossas iniciativas de marketing e ajudar a crescer nosso negócio.</p>
-          <a href="vaga.html" class="btn btn-bd-av w-100">Saiba Mais</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#modalVagaPop" class="btn btn-bd-av w-100">Saiba Mais</button>
         </div>
       </div>
     </div>
@@ -103,7 +107,7 @@
         <div class="card-body">
           <h5 class="card-title"><i class="bi bi-bullseye icon-job"></i>Gerente de Marketing</h5>
           <p class="card-text">Você é apaixonado por marketing e tem um histórico comprovado de sucesso? Estamos buscando um Gerente de Marketing para liderar nossas iniciativas de marketing e ajudar a crescer nosso negócio.</p>
-          <a href="vaga.html" class="btn btn-bd-av w-100">Saiba Mais</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#modalVagaPop" class="btn btn-bd-av w-100">Saiba Mais</button>
         </div>
       </div>
     </div>
@@ -113,13 +117,37 @@
         <div class="card-body">
           <h5 class="card-title"><i class="bi bi-bullseye icon-job"></i>Gerente de Marketing</h5>
           <p class="card-text">Você é apaixonado por marketing e tem um histórico comprovado de sucesso? Estamos buscando um Gerente de Marketing para liderar nossas iniciativas de marketing e ajudar a crescer nosso negócio.</p>
-          <a href="vaga.html" class="btn btn-bd-av w-100">Saiba Mais</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#modalVagaPop" class="btn btn-bd-av w-100">Saiba Mais</button>
         </div>
       </div>
     </div>
 
   </div>
 </main>
+<div class="modal" id="modalVagaPop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Detalhes da Vaga</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h1 class="h3">Engenheiro</h1>
+          <h2 class="h5">Empresa pi e pah</h2>
+          <p class="text-body">
+            Você é apaixonado por marketing e tem um histórico comprovado de sucesso? Estamos buscando um Gerente de Marketing para liderar nossas iniciativas de marketing e ajudar a crescer nosso negócio.
+          </p>
+          <p class="text-body">Salário: <b>R$800,00</b></p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="vaga.html" class="btn btn-bd-av">Ver Mais</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
