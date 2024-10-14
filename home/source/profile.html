@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Dom Pedro</title>
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link href="../css/profileCss.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start ">
+  <div class="container-fluid">
+    <!-- Logo exibido em dispositivos móveis -->
+    <a class="navbar-brand d-md-none d-inline" href="">JobIt</a>
+
+    <!-- Botão de menu para dispositivos móveis que abre/fecha o menu colapsável -->
+    <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+      <span class="navbar-toggler-icon"></span> <!-- Ícone do botão de menu -->
+
+      <!-- Itens de navegação dentro do botão -->
+      <li class="nav-item">
+        <a class="nav-link active" href="home.html" aria-current="page" target="_self">Feed</a> <!-- Link para a página do Feed -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Perfil</a> <!-- Link para a página do Perfil -->
+      </li>
+    </button>
+
+    <!-- Menu de navegação central com links (Feed e Ajuda) -->
+    <ul class="navbar-nav mx-auto text-md-center text-right">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Feed</a> <!-- Link para a página do Feed -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="help.html">Ajuda</a> <!-- Link para a página de Ajuda -->
+      </li>
+    </ul>
+
+    <!-- Colapso da barra de navegação à direita (exibe logo e outros links) -->
+    <div class="navbar-collapse collapse justify-content-end align-items-end w-auto" id="collapsingNavbar2">
+      <ul class="navbar-nav mx-auto text-md-end text-end">
+        <li class="nav-item my-auto">
+          <a class="nav-link navbar-brand d-none d-md-inline" href="">JobIt</a> <!-- Logo da marca que aparece em telas médias e grandes -->
+        </li>
+      </ul>
+    </div>
+
+    <!-- Links adicionais para o perfil na parte direita da barra de navegação -->
+    <div class="justify-content-end align-items-end" id="collapsingNavbar3">
+      <ul class="nav navbar-nav flex-row justify-content-md-end justify-content-end flex-nowrap">
+        <li class="nav-item">
+          <a class="nav-link active" href="profile.html" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Seção principal da página -->
+<main class="container-fluid py-5">
+  <div class="container">
+    <!-- Cartão de perfil -->
+    <div class="card mx-auto" style="max-width: 600px;">
+      <div class="card-body text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <img src="../img/profile.png" alt="Imagem de Perfil de Dom Pedro" class="profile-picture rounded-circle img-thumbnail"> <!-- Imagem do perfil -->
+            <h2 class="mt-3">Dom Pedro</h2> <!-- Nome do usuário -->
+            <p>Unimater</p> <!-- Instituição -->
+            <p>Pato Branco - PR</p> <!-- Localização -->
+            <p>Email: your_email@example.com</p> <!-- Email -->
+            <p>Telefone: (46) 90000-0000</p> <!-- Telefone -->
+            <p>GitHub: <a href="#" class="btn btn-bd-av py-2">Visitar GitHub</a></p> <!-- Link para GitHub -->
+            <p>Portfólio: <a href="#" class="btn btn-bd-av py-2">Alterar Portfólio</a></p> <!-- Link para alterar o portfólio -->
+
+            <div class="bio-heading">Sua Biografia:</div> <!-- Cabeçalho da biografia -->
+            <p class="text-justify px-3">
+              Ut at sodales tellus, ac viverra enim. Proin suscipit condimentum vulputate. Donec odio ante, tincidunt placerat iaculis at, laoreet eget mi. Cras in felis et turpis lacinia auctor sed id ex. Vestibulum ornare porta eros auctor tincidunt. Pellentesque eu vehicula tortor, nec pellentesque nisl. Aliquam convallis, elit id ultricies varius, sem tortor lacinia risus, sed tristique nisi enim non augue.
+            </p> <!-- Texto da biografia -->
+            <a href="#" class="btn btn-bd-av w-100 py-2 my-3">Configurações</a> <!-- Botão de configurações -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

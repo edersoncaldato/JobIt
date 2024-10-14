@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!-- Define o idioma como inglês e o tema da página como escuro -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres da página como UTF-8 -->
+  <title>Login</title> <!-- Título da página exibido na aba do navegador -->
+
+  <!-- Links para as folhas de estilo CSS -->
+  <link href="../css/bootstrap.css" rel="stylesheet"> <!-- Importa o CSS do Bootstrap para estilos responsivos -->
+  <link href="../css/style.css" rel="stylesheet"> <!-- Importa uma folha de estilo personalizada -->
+</head>
+<body class="d-flex align-items-center py-4 bg-body-tertiary"> <!-- Corpo da página, com flexbox para centralizar e fundo com a classe do Bootstrap -->
+<main class="m-auto w-100 form-container"> <!-- Seção principal da página, centralizada com largura total -->
+  <form> <!-- Início do formulário de login -->
+    <!-- <img class="mb-4" src="../img/jobit.png"/> --> <!-- Comentado: Logo da aplicação, se desejado -->
+
+    <h1 class="h3 mb-3 fw-normal d-flex justify-content-center">Login</h1> <!-- Título do formulário, centralizado -->
+
+    <div class="form-floating"> <!-- Contêiner para o campo de e-mail com estilo flutuante -->
+      <input type="email" class="form-control" id="floatingInput" placeholder="email@mail.com"/> <!-- Campo de entrada para o e-mail -->
+      <label for="floatingInput">E-mail</label> <!-- Rótulo para o campo de e-mail -->
+    </div>
+
+    <div class="form-floating"> <!-- Contêiner para o campo de senha com estilo flutuante -->
+      <input type="password" class="form-control" id="floatingInput" placeholder="****"/> <!-- Campo de entrada para a senha -->
+      <label for="floatingInput">Senha</label> <!-- Rótulo para o campo de senha -->
+    </div>
+
+    <div class="form-check text-start my-3 "> <!-- Caixa de seleção para "lembrar-me", com margem em cima e embaixo -->
+      <input type="checkbox" class="form-check-input" id="flexCheckDefault"/> <!-- Checkbox para a opção "Lembrar-me" -->
+      <label class="form-check-label" for="flexCheckDefault">Remember me</label> <!-- Rótulo para a opção "Lembrar-me" -->
+    </div>
+
+    <a href="home.html" class="btn btn-bd-av w-100 py-2">Login</a> <!-- Botão de login que redireciona para a página inicial -->
+
+    <div class="row my-4"> <!-- Linha para organizar o link de registro -->
+      <a class="col-3"> </a> <!-- Coluna vazia para centralização -->
+      <a href="register.html" class="col-6 h3 text-center nav-link">Registrar-se</a> <!-- Link para a página de registro, centralizado -->
+    </div>
+  </form> <!-- Fim do formulário -->
+</main>
+</body>
+</html>
