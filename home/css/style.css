@@ -297,4 +297,9 @@ textarea {
 }
 
 
-
+button[data-toggle="dropdown"].btn-default,
+button[data-toggle="dropdown"]:hover {
+  background-color: white !important;
+  color: #2c3e50 !important;
+  border: 2px solid #dce4ec;
+}

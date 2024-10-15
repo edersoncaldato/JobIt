@@ -7,8 +7,8 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/bootstrap.css" rel="stylesheet">
 </head>
-<body>
 
+<header>
 <!-- Navbar (Barra de Navegação) -->
 <nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start">
   <div class="container-fluid">
@@ -55,14 +55,16 @@
     </div>
   </div>
 </nav>
+</header>
 
+<body>
 <!-- Conteúdo Principal -->
 <main class="container mt-5">
   <h1 class="text-center mb-4">Engenheiro de Software</h1>
 
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div class="card job-card">
+      <div class="card">
         <div class="card-body">
           <!-- Título da vaga -->
           <h5 class="card-title"><i class="bi bi-laptop-code icon-job"></i> Junte-se à Nossa Equipe de Desenvolvimento!</h5>
@@ -87,7 +89,6 @@
             <li>Experiência em design e desenvolvimento de software em um ambiente orientado a testes.</li>
             <li>Proficiência no framework .NET e na linguagem de programação C#.</li>
           </ul>
-
           <!-- Benefícios da vaga -->
           <h6>Benefícios:</h6>
           <ul>
@@ -96,15 +97,64 @@
             <li>Horários de trabalho flexíveis e opções de trabalho remoto.</li>
             <li>Oportunidades de crescimento e desenvolvimento profissional.</li>
           </ul>
-
           <!-- Botão para aplicar à vaga -->
-          <a href="#" class="btn btn-bd-av w-100 mt-3">Aplicar Agora</a>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#aplicarAgora" class="btn btn-bd-av w-100 mt-3">Me Inscrever</button>
         </div>
       </div>
     </div>
   </div>
 </main>
+<div class="modal" id="aplicarAgora" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Detalhes da Vaga</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="curriculo" class="form-label">Selecione o Curriculo</label>
+            <select class="form-select" aria-label="Selecione Curriculo" id="curriculo">
+              <option selected>Selecione</option>
+              <option value="1">Curriculo 01</option>
+              <option value="2">Curriculo 02</option>
+              <option value="3">Curriculo 03</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="telefoneVagas" class="form-label">Telefone:</label>
+            <select class="form-select" aria-label="Selecione Curriculo" id="telefoneVagas">
+              <option selected>Selecione</option>
+              <option value="1">Telefone 01</option>
+              <option value="2">Telefone 02</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="emailVagas" class="form-label">Email:</label>
+            <select class="form-select" aria-label="Selecione Curriculo" id="emailVagas">
+              <option selected>Selecione</option>
+              <option value="1">Email 01</option>
+              <option value="2">Email 02</option>
+              <option value="3">Email 03</option>
+            </select>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Concordo com os Termos de Uso</label>
+          </div>
+          <div class="mb-3">
 
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-bd-av">Enviar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
