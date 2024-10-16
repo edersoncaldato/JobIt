@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!-- Define o idioma como inglês e o tema como escuro -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Registro</title> <!-- Título da página -->
+
+  <!-- Links para as folhas de estilo CSS -->
+  <link href="../css/style.css" rel="stylesheet"> <!-- Estilo personalizado -->
+  <link href="../css/bootstrap.css" rel="stylesheet"> <!-- Estilo do Bootstrap -->
+
+  <!-- Barra de navegação (navbar) -->
+  <nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start">
+    <div class="container-fluid"> <!-- Contêiner fluido para a navbar -->
+
+      <!-- Logo visível apenas em dispositivos móveis -->
+      <a class="navbar-brand d-md-none d-inline" href="">JobIt</a>
+
+      <!-- Botão para colapsar/expandir a navbar em dispositivos móveis -->
+      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+        <span class="navbar-toggler-icon"></span> <!-- Ícone do botão de menu -->
+
+        <!-- Itens de navegação dentro do botão de colapso (deve estar fora do botão) -->
+        <li class="nav-item">
+          <a class="nav-link active" href="home.html" aria-current="page" target="_self">Feed</a> <!-- Link para a página de Feed -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Perfil</a> <!-- Link para a página de Perfil -->
+        </li>
+      </button>
+
+      <!-- Menu de navegação central com links (Feed e Ajuda) -->
+      <ul class="navbar-nav mx-auto text-md-center text-right">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Feed</a> <!-- Link para a página de Feed -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="help.html">Ajuda</a> <!-- Link para a página de Ajuda -->
+        </li>
+      </ul>
+
+      <!-- Colapso da barra de navegação à direita (exibe logo e outros links) -->
+      <div class="navbar-collapse collapse justify-content-end align-items-end w-auto" id="collapsingNavbar2">
+        <ul class="navbar-nav mx-auto text-md-end text-end">
+          <li class="nav-item my-auto">
+            <a class="nav-link navbar-brand d-none d-md-inline" href="">JobIt</a> <!-- Logo que aparece em telas médias e grandes -->
+          </li>
+        </ul>
+      </div>
+
+      <!-- Links adicionais para o perfil à direita da barra de navegação -->
+      <div class="justify-content-end align-items-end" id="collapsingNavbar3">
+        <ul class="nav navbar-nav flex-row justify-content-md-end justify-content-end flex-nowrap">
+          <li class="nav-item">
+            <a class="nav-link active" href="profile.html" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</head>
+<body class="align-items-center"> <!-- Define a classe para centralizar os itens no corpo -->
+<main class="container-fluid px-5 py-5"> <!-- Seção principal da página com espaçamento horizontal e vertical -->
+  <div class="container"> <!-- Contêiner para agrupar o conteúdo -->
+    <div class="card"> <!-- Cartão para agrupar conteúdo -->
+      <div class="card-body"> <!-- Corpo do cartão -->
+        <div class="container"> <!-- Contêiner para o formulário -->
+          <div class="row justify-content-center"> <!-- Linha para centralizar o conteúdo -->
+            <div class="col-md-6"> <!-- Coluna que ocupa metade da largura em telas médias e maiores -->
+              <h2 class="text-center mb-4">Formulário de Registro</h2> <!-- Título do formulário -->
+              <form> <!-- Início do formulário -->
+                <div class="mb-3"> <!-- Espaçamento inferior para o primeiro campo -->
+                  <label for="nome" class="form-label">Nome Completo</label> <!-- Rótulo para o campo de nome -->
+                  <input type="text" class="form-control" id="nome" required> <!-- Campo de entrada para nome, obrigatório -->
+                </div>
+                <div class="mb-3"> <!-- Espaçamento inferior para o campo de email -->
+                  <label for="email" class="form-label">Email</label> <!-- Rótulo para o campo de email -->
+                  <input type="email" class="form-control" id="email" required> <!-- Campo de entrada para email, obrigatório -->
+                </div>
+                <div class="mb-3"> <!-- Espaçamento inferior para o campo de senha -->
+                  <label for="senha" class="form-label">Senha</label> <!-- Rótulo para o campo de senha -->
+                  <input type="password" class="form-control" id="senha" required> <!-- Campo de entrada para senha, obrigatório -->
+                </div>
+                <div class="mb-3"> <!-- Espaçamento inferior para o campo de CPF -->
+                  <label for="cpf" class="form-label">CPF</label> <!-- Rótulo para o campo de CPF -->
+                  <input type="text" class="form-control" id="cpf" required> <!-- Campo de entrada para CPF, obrigatório -->
+                </div>
+                <div class="mb-3"> <!-- Espaçamento inferior para o campo de seleção -->
+                  <select class="form-select" aria-label="Default select example"> <!-- Campo de seleção para cidades -->
+                    <option selected>Cidade</option> <!-- Opção padrão que será exibida -->
+                    <option value="1">Pato Branco</option> <!-- Opção para Pato Branco -->
+                    <option value="2">Francisco Beltrão</option> <!-- Opção para Francisco Beltrão -->
+                    <option value="3">Vitorino</option> <!-- Opção para Vitorino -->
+                  </select>
+                </div>
+                <label for="basic-url" class="form-label">GitHub Link</label> <!-- Rótulo para o campo de link do GitHub -->
+                <div class="input-group mb-3"> <!-- Grupo de entrada para o link do GitHub -->
+                  <span class="input-group-text" id="basic-addon3">github.com/</span> <!-- Texto fixo para o link -->
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"> <!-- Campo de entrada para o link -->
+                </div>
+                <div class="input-group mb-3"> <!-- Grupo de entrada para o upload do currículo -->
+                  <input type="file" class="form-control" id="inputGroupFile02"> <!-- Campo para upload de arquivo -->
+                  <label class="input-group-text" for="inputGroupFile02">Curriculo</label> <!-- Rótulo para o campo de upload -->
+                </div>
+                <div class="mb-3 my-4"> <!-- Espaçamento inferior para o botão de registro -->
+                  <a type="link" class="btn btn-bd-av w-100" href="home.html">Registrar</a> <!-- Botão de registro que redireciona para a página inicial -->
+                </div>
+              </form> <!-- Fim do formulário -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+</body>
+</html>
