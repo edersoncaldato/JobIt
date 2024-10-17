@@ -4,9 +4,8 @@
   <meta charset="UTF-8"> <!-- Define a codificação de caracteres da página como UTF-8 -->
   <title>Login</title> <!-- Título da página exibido na aba do navegador -->
 
-  <!-- Links para as folhas de estilo CSS -->
-  <link href="../css/bootstrap.css" rel="stylesheet"> <!-- Importa o CSS do Bootstrap para estilos responsivos -->
-  <link href="../css/style.css" rel="stylesheet"> <!-- Importa uma folha de estilo personalizada -->
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary"> <!-- Corpo da página, com flexbox para centralizar e fundo com a classe do Bootstrap -->
 <main class="m-auto w-100 form-container"> <!-- Seção principal da página, centralizada com largura total -->
@@ -30,7 +29,7 @@
       <label class="form-check-label" for="flexCheckDefault">Remember me</label> <!-- Rótulo para a opção "Lembrar-me" -->
     </div>
 
-    <a href="home.html" class="btn btn-bd-av w-100 py-2">Login</a> <!-- Botão de login que redireciona para a página inicial -->
+    <a href="inicio" class="btn btn-bd-av w-100 py-2">Login</a> <!-- Botão de login que redireciona para a página inicial -->
 
     <div class="row my-4"> <!-- Linha para organizar o link de registro -->
       <a class="col-3"> </a> <!-- Coluna vazia para centralização -->

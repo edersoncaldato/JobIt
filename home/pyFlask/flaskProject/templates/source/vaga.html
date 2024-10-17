@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vaga: {{ vaga.tituloVaga }}</title>
+  <title>Vaga:{{ vaga.tituloVaga }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
 </head>
@@ -34,7 +34,7 @@
       <div class="card job-card">
         <div class="card-body">
           <h5 class="card-title">{{ vaga.tituloVaga }}</h5>
-          <p>{{ vaga.descricaoCompletaVaga }}</p>
+          {{ vaga.descricaoCompletaVaga|safe }}
           <a href="#" class="btn btn-bd-av w-100 mt-3">Aplicar Agora</a>
         </div>
       </div>
