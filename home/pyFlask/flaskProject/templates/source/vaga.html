@@ -3,28 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vaga:{{ vaga.tituloVaga }}</title>
+  <title>Vaga - {{ vaga.tituloVaga }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
 </head>
-<header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start">
-    <div class="container-fluid">
-      <a class="navbar-brand d-md-none d-inline" href="">JobIt</a>
-      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <ul class="navbar-nav mx-auto text-md-center text-right">
-        <li class="nav-item">
-          <a class="nav-link" href="home.html">Feed</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Perfil</a>
+<header class="dropdown-header">
+<nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start ">
+  <div class="container-fluid">
+    <!-- Logo exibido em dispositivos móveis -->
+    <a class="navbar-brand d-md-none d-inline" href="">JobIt</a>
+
+    <!-- Botão de menu para dispositivos móveis que abre/fecha o menu colapsável -->
+    <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+      <span class="navbar-toggler-icon"></span> <!-- Ícone do botão de menu -->
+
+      <!-- Itens de navegação dentro do botão -->
+      <li class="nav-item">
+        <a class="nav-link active" href="inicio" aria-current="page" target="_self">Feed</a> <!-- Link para a página do Feed -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile">Perfil</a> <!-- Link para a página do Perfil -->
+      </li>
+    </button>
+
+    <!-- Menu de navegação central com links (Feed e Ajuda) -->
+    <ul class="navbar-nav mx-auto text-md-center text-right">
+      <li class="nav-item">
+        <a class="nav-link" href="inicio">Feed</a> <!-- Link para a página do Feed -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="help">Ajuda</a> <!-- Link para a página de Ajuda -->
+      </li>
+    </ul>
+
+    <!-- Colapso da barra de navegação à direita (exibe logo e outros links) -->
+    <div class="navbar-collapse collapse justify-content-end align-items-end w-auto" id="collapsingNavbar2">
+      <ul class="navbar-nav mx-auto text-md-end text-end">
+        <li class="nav-item my-auto">
+          <a class="nav-link navbar-brand d-none d-md-inline" href="">JobIt</a> <!-- Logo da marca que aparece em telas médias e grandes -->
         </li>
       </ul>
     </div>
-  </nav>
+
+    <!-- Links adicionais para o perfil na parte direita da barra de navegação -->
+    <div class="justify-content-end align-items-end" id="collapsingNavbar3">
+      <ul class="nav navbar-nav flex-row justify-content-md-end justify-content-end flex-nowrap">
+        <li class="nav-item">
+          <a class="nav-link active" href="profile" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </header>
 <body>
 <main class="container mt-5">

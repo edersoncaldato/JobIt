@@ -4,60 +4,58 @@
   <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
   <title>Registro</title> <!-- Título da página -->
 
-  <!-- Links para as folhas de estilo CSS -->
-  <link href="../css/style.css" rel="stylesheet"> <!-- Estilo personalizado -->
-  <link href="../css/bootstrap.css" rel="stylesheet"> <!-- Estilo do Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+<header class="dropdown-header">
+<nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start ">
+  <div class="container-fluid">
+    <!-- Logo exibido em dispositivos móveis -->
+    <a class="navbar-brand d-md-none d-inline" href="">JobIt</a>
 
-  <!-- Barra de navegação (navbar) -->
-  <nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start">
-    <div class="container-fluid"> <!-- Contêiner fluido para a navbar -->
+    <!-- Botão de menu para dispositivos móveis que abre/fecha o menu colapsável -->
+    <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+      <span class="navbar-toggler-icon"></span> <!-- Ícone do botão de menu -->
 
-      <!-- Logo visível apenas em dispositivos móveis -->
-      <a class="navbar-brand d-md-none d-inline" href="">JobIt</a>
+      <!-- Itens de navegação dentro do botão -->
+      <li class="nav-item">
+        <a class="nav-link active" href="inicio" aria-current="page" target="_self">Feed</a> <!-- Link para a página do Feed -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile">Perfil</a> <!-- Link para a página do Perfil -->
+      </li>
+    </button>
 
-      <!-- Botão para colapsar/expandir a navbar em dispositivos móveis -->
-      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-        <span class="navbar-toggler-icon"></span> <!-- Ícone do botão de menu -->
+    <!-- Menu de navegação central com links (Feed e Ajuda) -->
+    <ul class="navbar-nav mx-auto text-md-center text-right">
+      <li class="nav-item">
+        <a class="nav-link" href="inicio">Feed</a> <!-- Link para a página do Feed -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="help">Ajuda</a> <!-- Link para a página de Ajuda -->
+      </li>
+    </ul>
 
-        <!-- Itens de navegação dentro do botão de colapso (deve estar fora do botão) -->
-        <li class="nav-item">
-          <a class="nav-link active" href="home.html" aria-current="page" target="_self">Feed</a> <!-- Link para a página de Feed -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Perfil</a> <!-- Link para a página de Perfil -->
-        </li>
-      </button>
-
-      <!-- Menu de navegação central com links (Feed e Ajuda) -->
-      <ul class="navbar-nav mx-auto text-md-center text-right">
-        <li class="nav-item">
-          <a class="nav-link" href="home.html">Feed</a> <!-- Link para a página de Feed -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="help.html">Ajuda</a> <!-- Link para a página de Ajuda -->
+    <!-- Colapso da barra de navegação à direita (exibe logo e outros links) -->
+    <div class="navbar-collapse collapse justify-content-end align-items-end w-auto" id="collapsingNavbar2">
+      <ul class="navbar-nav mx-auto text-md-end text-end">
+        <li class="nav-item my-auto">
+          <a class="nav-link navbar-brand d-none d-md-inline" href="">JobIt</a> <!-- Logo da marca que aparece em telas médias e grandes -->
         </li>
       </ul>
-
-      <!-- Colapso da barra de navegação à direita (exibe logo e outros links) -->
-      <div class="navbar-collapse collapse justify-content-end align-items-end w-auto" id="collapsingNavbar2">
-        <ul class="navbar-nav mx-auto text-md-end text-end">
-          <li class="nav-item my-auto">
-            <a class="nav-link navbar-brand d-none d-md-inline" href="">JobIt</a> <!-- Logo que aparece em telas médias e grandes -->
-          </li>
-        </ul>
-      </div>
-
-      <!-- Links adicionais para o perfil à direita da barra de navegação -->
-      <div class="justify-content-end align-items-end" id="collapsingNavbar3">
-        <ul class="nav navbar-nav flex-row justify-content-md-end justify-content-end flex-nowrap">
-          <li class="nav-item">
-            <a class="nav-link active" href="profile.html" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
-          </li>
-        </ul>
-      </div>
     </div>
-  </nav>
-</head>
+
+    <!-- Links adicionais para o perfil na parte direita da barra de navegação -->
+    <div class="justify-content-end align-items-end" id="collapsingNavbar3">
+      <ul class="nav navbar-nav flex-row justify-content-md-end justify-content-end flex-nowrap">
+        <li class="nav-item">
+          <a class="nav-link active" href="profile" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
 <body class="align-items-center"> <!-- Define a classe para centralizar os itens no corpo -->
 <main class="container-fluid px-5 py-5"> <!-- Seção principal da página com espaçamento horizontal e vertical -->
   <div class="container"> <!-- Contêiner para agrupar o conteúdo -->

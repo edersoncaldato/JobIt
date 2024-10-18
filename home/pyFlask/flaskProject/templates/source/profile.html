@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile - Dom Pedro</title>
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/profileCss.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
 </head>
-<body>
+<header class="dropdown-header">
 <nav class="navbar navbar-expand-md bg-body-tertiary justify-content-md-center justify-content-start ">
   <div class="container-fluid">
     <!-- Logo exibido em dispositivos móveis -->
@@ -20,20 +20,20 @@
 
       <!-- Itens de navegação dentro do botão -->
       <li class="nav-item">
-        <a class="nav-link active" href="home.html" aria-current="page" target="_self">Feed</a> <!-- Link para a página do Feed -->
+        <a class="nav-link active" href="inicio" aria-current="page" target="_self">Feed</a> <!-- Link para a página do Feed -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Perfil</a> <!-- Link para a página do Perfil -->
+        <a class="nav-link" href="profile">Perfil</a> <!-- Link para a página do Perfil -->
       </li>
     </button>
 
     <!-- Menu de navegação central com links (Feed e Ajuda) -->
     <ul class="navbar-nav mx-auto text-md-center text-right">
       <li class="nav-item">
-        <a class="nav-link" href="home.html">Feed</a> <!-- Link para a página do Feed -->
+        <a class="nav-link" href="inicio">Feed</a> <!-- Link para a página do Feed -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="help.html">Ajuda</a> <!-- Link para a página de Ajuda -->
+        <a class="nav-link" href="help">Ajuda</a> <!-- Link para a página de Ajuda -->
       </li>
     </ul>
 
@@ -50,13 +50,14 @@
     <div class="justify-content-end align-items-end" id="collapsingNavbar3">
       <ul class="nav navbar-nav flex-row justify-content-md-end justify-content-end flex-nowrap">
         <li class="nav-item">
-          <a class="nav-link active" href="profile.html" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
+          <a class="nav-link active" href="profile" aria-current="page" target="_self">Perfil</a> <!-- Link para a página do Perfil -->
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
+</header>
+<body>
 <!-- Seção principal da página -->
 <main class="container-fluid py-5">
   <div class="container">
